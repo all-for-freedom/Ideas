@@ -1,0 +1,39 @@
+########################################
+# Normalize EOL
+########################################
+* text=auto
+
+########################################
+# Binary files
+########################################
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
+*.avi binary
+*.mov binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.ttf binary
+*.otf binary
+*.apk binary
+*.ipa binary
+
+########################################
+# AI Model Files (Use Git LFS)
+########################################
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.pt  filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.tflite filter=lfs diff=lfs merge=lfs -text
+*.pb filter=lfs diff=lfs merge=lfs -text
+*.h5 filter=lfs diff=lfs merge=lfs -text
+
+########################################
+# GitHub Linguist
+########################################
+# Exclude third-party assets/libs
+third_party/** linguist-vendored
+assets/** linguist-vendored
